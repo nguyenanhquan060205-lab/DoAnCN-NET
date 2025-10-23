@@ -39,6 +39,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.PnlAdmin = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,9 +145,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 16);
+            this.label1.Size = new System.Drawing.Size(315, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "HỆ THỐNG QUẢN LÍ ĐIỂM DANH SINH VIÊN - ADMIN ";
+            this.label1.Text = "HỆ THỐNG QUẢN LÍ ĐIỂM DANH SINH VIÊN";
             // 
             // PnlAdmin
             // 
@@ -155,11 +156,25 @@
             this.PnlAdmin.Size = new System.Drawing.Size(1363, 726);
             this.PnlAdmin.TabIndex = 2;
             // 
+            // lblWelcome
+            // 
+            this.lblWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(333, 80);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(22, 16);
+            this.lblWelcome.TabIndex = 3;
+            this.lblWelcome.Text = "---";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1369, 828);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.PnlAdmin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -187,5 +202,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PnlAdmin;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

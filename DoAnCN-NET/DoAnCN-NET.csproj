@@ -82,6 +82,48 @@
     <Compile Include="Forms\Sinhvien.Designer.cs">
       <DependentUpon>Sinhvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\BuoiHoc.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DangKyLop.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiemDanh.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiangVien.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KHOA.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LopHoc.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MonHoc.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NguoiDung.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLDiemDanh.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemDanh.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLDiemDanh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLDiemDanh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SinhVien.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -232,6 +274,13 @@
     <EmbeddedResource Include="UserControls\Sinhvien\UC_ThongTinSV.resx">
       <DependentUpon>UC_ThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\QLDiemDanh.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLDiemDanh.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\QLDiemDanh.edmx.diagram">
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -250,6 +299,16 @@
     <None Include="Models\Resources\1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\QLDiemDanh.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+      <LastGenOutput>QLDiemDanh.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\QLDiemDanh.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+      <LastGenOutput>QLDiemDanh.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Resources\eyes.jpg" />
   </ItemGroup>
   <ItemGroup>

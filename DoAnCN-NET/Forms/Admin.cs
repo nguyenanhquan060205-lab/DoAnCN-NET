@@ -1,4 +1,5 @@
-﻿using DoAnCN_NET.UserControls;
+﻿using DoAnCN_NET.Models;
+using DoAnCN_NET.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,11 @@ namespace DoAnCN_NET.Forms
 {
     public partial class Admin : Form
     {
-        public Admin()
+        private int _userID;
+        public Admin(int userID)
         {
             InitializeComponent();
+            _userID = userID;
         }
 
         private void LoadUserControl(UserControl uc)
@@ -57,6 +60,17 @@ namespace DoAnCN_NET.Forms
         private void Admin_Load(object sender, EventArgs e)
         {
             LoadUserControl(new UC_SinhVien());
+  
+            using (var db = new QLDIEMDANHEntities())
+            {
+                var user = db.NguoiDungs.FirstOrDefault(u => u.UserID == _userID);
+                if (user != null)
+                {
+                    lblWelcome.Text = user.Username;
+                }
+            }
         }
+
     }
 }
+

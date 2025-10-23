@@ -14,9 +14,12 @@ namespace DoAnCN_NET.Forms
 {
     public partial class Sinhvien : Form
     {
-        public Sinhvien()
+        private int _userID;
+
+        public Sinhvien(int userID)
         {
             InitializeComponent();
+            _userID = userID;
         }
         private void LoadUserControl(UserControl uc)
         {

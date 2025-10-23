@@ -14,11 +14,13 @@ namespace DoAnCN_NET.Forms
 {
     public partial class Giangvien : Form
     {
-        public Giangvien()
+        private int _userID;
+
+        public Giangvien(int userID)
         {
             InitializeComponent();
+            _userID = userID;
         }
-
         private void LoadUserControl(UserControl uc)
         {
             PnlGiangvien.Controls.Clear();

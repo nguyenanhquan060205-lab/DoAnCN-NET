@@ -346,9 +346,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(8, 348);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(228, 20);
+            this.label11.Size = new System.Drawing.Size(213, 20);
             this.label11.TabIndex = 36;
-            this.label11.Text = "DANH  SÁCH GIẢNG VIÊN";
+            this.label11.Text = "DANH  SÁCH SINH VIÊN";
             // 
             // UC_SinhVien
             // 
