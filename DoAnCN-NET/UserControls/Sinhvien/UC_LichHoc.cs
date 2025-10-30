@@ -16,5 +16,10 @@ namespace DoAnCN_NET.UserControls.Sinhvien
         {
             InitializeComponent();
         }
+
+        private void UC_LichHoc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

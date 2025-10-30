@@ -14,9 +14,43 @@ namespace DoAnCN_NET.Forms
 {
     public partial class Sinhvien : Form
     {
-        public Sinhvien()
+        private int _userID;
+        bool isCollapsed = true;
+
+        private void btnToggle_Click(object sender, EventArgs e)
+        {
+            menuTimer.Start();
+        }
+
+        private void menuTimer_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                pnlMenu.Width += 10;
+                PnlSinhvien.Left += 10; // di chuyển panel nội dung theo
+                if (pnlMenu.Width >= 200)
+                {
+                    menuTimer.Stop();
+                    isCollapsed = false;
+                    btnToggle.Text = "<";
+                }
+            }
+            else
+            {
+                pnlMenu.Width -= 10;
+                PnlSinhvien.Left -= 10; // di chuyển panel nội dung theo
+                if (pnlMenu.Width <= 10)
+                {
+                    menuTimer.Stop();
+                    isCollapsed = true;
+                    btnToggle.Text = ">";
+                }
+            }
+        }
+        public Sinhvien(int userID)
         {
             InitializeComponent();
+            _userID = userID;
         }
         private void LoadUserControl(UserControl uc)
         {

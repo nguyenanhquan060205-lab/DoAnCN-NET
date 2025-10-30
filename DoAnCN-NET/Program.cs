@@ -17,10 +17,8 @@ namespace DoAnCN_NET
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new DangNhap());
-            //Application.Run(new Admin());
-            //Application.Run(new Giangvien());
-            Application.Run(new Sinhvien());
+            Application.Run(new DangNhap());
+
 
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,26 +18,20 @@ namespace DoAnCN_NET.UserControls
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
+                Color.MediumPurple, Color.RoyalBlue, 45F))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void UC_LopHoc_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

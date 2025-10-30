@@ -16,5 +16,26 @@ namespace DoAnCN_NET.UserControls
         {
             InitializeComponent();
         }
+        bool isPasswordVisible = false;
+        private void picShowHide_Click(object sender, EventArgs e)
+        {
+            if (isPasswordVisible)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                picShowHide.Image = Properties.Resources.hideeyes;
+                isPasswordVisible = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                picShowHide.Image = Properties.Resources.eyes;
+                isPasswordVisible = true;
+            }
+        }
+
+        private void UC_NguoiDung_Load(object sender, EventArgs e)
+        {
+            picShowHide.Image = Properties.Resources.hideeyes;
+        }
     }
 }

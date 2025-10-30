@@ -32,5 +32,9 @@ namespace DoAnCN_NET.UserControls
 
         }
 
+        private void UC_SinhVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

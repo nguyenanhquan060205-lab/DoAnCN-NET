@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -37,16 +37,52 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=8.2.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.8.2.1\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.1.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.8.1.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +117,49 @@
     </Compile>
     <Compile Include="Forms\Sinhvien.Designer.cs">
       <DependentUpon>Sinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Helper.cs" />
+    <Compile Include="Models\BuoiHoc.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DangKyLop.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiemDanh.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GiangVien.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KHOA.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LopHoc.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MonHoc.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NguoiDung.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLDiemDanh.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemDanh.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLDiemDanh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QLDiemDanh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SinhVien.cs">
+      <DependentUpon>QLDiemDanh.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,6 +311,13 @@
     <EmbeddedResource Include="UserControls\Sinhvien\UC_ThongTinSV.resx">
       <DependentUpon>UC_ThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\QLDiemDanh.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLDiemDanh.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\QLDiemDanh.edmx.diagram">
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -250,7 +336,40 @@
     <None Include="Models\Resources\1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\QLDiemDanh.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+      <LastGenOutput>QLDiemDanh.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\QLDiemDanh.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLDiemDanh.edmx</DependentUpon>
+      <LastGenOutput>QLDiemDanh.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Resources\eyes.jpg" />
+    <Content Include="Resources\eyes.png" />
+    <None Include="Resources\Untitled11.png" />
+    <None Include="Resources\Untitled1.png" />
+    <None Include="Resources\Untitled.png" />
+    <None Include="Resources\hideeyes1.png" />
+    <None Include="Resources\eyes1.png" />
+    <Content Include="Resources\hideeyes.png" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\icons8-search-48.png" />
+    <None Include="Resources\z7157919336204_142f5b9653ca93ca2bf46b20a0abf4f3.jpg" />
+    <None Include="Resources\z7157919327372_b0d84426d133ef65079f97a362d243b5.jpg" />
+    <None Include="Resources\z7157919314291_28a7094c04ce65901147511244133a74.jpg" />
+    <None Include="Resources\z7157919326943_c18d80614123991f9dfa9cf285fe291b.jpg" />
+    <None Include="Resources\z7157946954981_005773f78deeae4eb31ad1dbfd447a5c.jpg" />
+    <None Include="Resources\z7157946936080_d7ba9eec6d84b31482bb47417514d7011.jpg" />
+    <None Include="Resources\z7157946944063_a04b41e0006e345781ed5787873d316c.jpg" />
+    <None Include="Resources\z7157946936080_d7ba9eec6d84b31482bb47417514d701.jpg" />
+    <None Include="Resources\z7157946934421_137c0980c115634d1873919de9005a03.jpg" />
+    <None Include="Resources\z7157919315837_6c1692b296256f3839562d65f2c1ea3e.jpg" />
+    <None Include="Resources\hinh-nen-dep-96-scaled.jpg" />
+    <None Include="Resources\z7157472750554_6f75d2ae20feef6fc29a0abd98a08a6c.jpg" />
+    <None Include="Resources\z7157101637294_ae4a5210d4d955082631eb289d4211dc.jpg" />
+    <None Include="Resources\z7157101634387_ec9aa61789f484e7292fdb332133ab51.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -261,8 +380,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
 </Project>

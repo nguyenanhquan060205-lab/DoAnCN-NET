@@ -17,5 +17,11 @@ namespace DoAnCN_NET.UserControls.Sinhvien
             InitializeComponent();
         }
 
+        private void UC_ThongTinSV_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
